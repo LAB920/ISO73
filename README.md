@@ -1,2 +1,2 @@
-# ISO73
-Web portal hobbyfotografie vereniging ISO'73
+# ISO'73 Webportal
+Hobbyfotografie vereniging ISO'73
