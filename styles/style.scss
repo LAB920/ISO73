@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    font-family: 'Roboto' sans-serif;
+}
+
+.iso73-menu {
+    display: block;
+    color: #00010D;
+    text-decoration: none !important;
+    font-size: .75em;
+    line-height: 3em;
+    letter-spacing: .07em;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        opacity: 0.75;
+
+        :hover {
+            opacity: 1;
+            cursor: pointer;
+
+            ::before {
+                height: 3px;
+            }
+        }
+
+        ::before {
+            transition: 200ms;
+            height: 5px;
+            content: "";
+            position: absolute;
+            background-color: #00010D;
+            height: 0%;
+            width: 50%;
+            bottom: 5px;
+        }
+
+        .word-lid {
+            background-color: #00010D;
+            opacity: 0.75;
+            color: white !important;
+
+            :hover {
+                background-color: #00010D;
+            }
+        }
+    }
+}
