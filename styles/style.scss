@@ -1,17 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Public+Sans:400,700,800,900&display=swap');
-
+@import "settings/settings";
 @import "hamburgers/hamburgers";
 @import "slider/slider";
-
-/* Color Theme Swatches */
-$accColor1: #59252F;
-$accColor2: #26141C;
-$accColor3: rgb(254, 254, 254);
-$accColor4: #8C5946;
-$accColor5: #A6554E;
-$accColor6: #FFFDF6;
-
-$textColor: $accColor2;
 
 html, body {
     margin: 0;
@@ -31,6 +20,7 @@ button:focus {outline:0;}
 
 #menu-bar {
     background-color: $accColor3;
+    opacity: $backgroundOpacity;
     min-height: 100px;
     height: 10%;
     transition: height .5s;
@@ -39,6 +29,9 @@ button:focus {outline:0;}
     
     &.open {
         height: 100vh !important;
+        animation-name: slide-down-header;
+        animation-duration: 0.7s;
+        opacity: 1;
     }
 }
 
@@ -123,7 +116,7 @@ button:focus {outline:0;}
                 margin-top: 20px;
     
                 &:hover {
-                    background-size: 100% 100%;
+                    background-size: 101% 101%;
                     color: $accColor3;
                 }
         }
@@ -146,5 +139,10 @@ button:focus {outline:0;}
 
 @keyframes reveal {
     from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes slide-down-header {
+    from {opacity: $backgroundOpacity}
     to {opacity: 1}
 }

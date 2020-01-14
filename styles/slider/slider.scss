@@ -1,3 +1,5 @@
+@import "../settings/settings";
+
 .slideshow {
   position: absolute;
   z-index: 1;
@@ -34,6 +36,24 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(120deg, $accColor4, $accColor5);
+        opacity: .3;
+        mix-blend-mode: color;
+        z-index: 1000;
+      }
+
+      & > * {
+        z-index: 100;
       }
     }
   }
