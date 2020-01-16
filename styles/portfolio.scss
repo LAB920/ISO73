@@ -1,0 +1,15 @@
+@import "style";
+
+.portfolio {
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    & > img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+    }
+}

@@ -5,10 +5,16 @@
 html, body {
     margin: 0;
     font-family: 'Public Sans', sans-serif;
-    color: $textColor;
+    color: $accColor2;
 }
 
-button:focus {outline:0;}
+a {
+    text-decoration: none;
+}
+
+button:focus {
+    outline:0;
+}
 
 #home-container {
     height: 100vh;
@@ -25,7 +31,7 @@ button:focus {outline:0;}
     height: 10%;
     transition: height .5s;
     z-index: 101;
-    box-shadow: 0px 5px 15px 0px rgba(38,20,28,0.6);
+    box-shadow: 0px 5px 15px 0px rgba(38, 20, 28, 0.966);
     
     &.open {
         height: 100vh !important;
@@ -59,18 +65,16 @@ button:focus {outline:0;}
         svg {
             cursor: pointer;
             width: 130px;
-            fill: $textColor;
+            fill: $accColor2;
         }
     }
 
     #menu-list {
         visibility: hidden;
-
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         width: 40%;
     
         .nav-link {
@@ -78,7 +82,7 @@ button:focus {outline:0;}
             position: relative;
             opacity: 0.75;
             display: block;
-            color: $textColor;
+            color: $accColor2;
             text-decoration: none;
             font-size: 1em;
             letter-spacing: .07em;
@@ -89,7 +93,7 @@ button:focus {outline:0;}
             &::after {
                 display:block;
                 content: '';
-                border-bottom: solid 3px $textColor;  
+                border-bottom: solid 3px $accColor2;  
                 transform: scaleX(0);  
                 transition: transform 200ms ease-in-out;
             }
@@ -111,7 +115,7 @@ button:focus {outline:0;}
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
                 background-size: 0% 100%;
-                transition: background-size .2s, color .2s;
+                transition: background-size .2s, color .2s ease-in-out;
                 opacity: 0.75;
                 margin-top: 20px;
     
