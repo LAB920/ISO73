@@ -7,9 +7,52 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
 
+    margin-bottom: 1em;
+
     & > img {
         object-fit: cover;
         width: 100%;
         max-height: 100%;
     }
 }
+
+.mijn-fotos {
+
+    .mijn-foto-container {
+        position: relative;
+
+        & > img {
+            object-fit: cover;
+            width: 100%;
+        }
+
+        /* The overlay effect (full height and width) - lays on top of the container and over the image */
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: black;
+
+            .icon {
+                color: white;
+                font-size: 40px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+              }
+        }
+
+        &:hover .overlay {
+            opacity: .7;
+        }
+    }
+}   

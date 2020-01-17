@@ -2,7 +2,6 @@
 session_start(); 
 
   if (!isset($_SESSION['username'])) {
-  	$_SESSION['msg'] = "Je moet eerst inloggen";
   	header('location: login.php');
   }
 
@@ -26,7 +25,8 @@ session_start();
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welkom <strong><?php echo $_SESSION['username']; ?></strong></p>
+      <p>Welkom <strong><?php echo $_SESSION['username']; ?></strong></p>
+      <p> id: <?= $_SESSION['user_id'] ?></p>
     	<p> <a href="index.php?logout='1'">Uitloggen</a> </p>
     <?php endif ?>
 </div>
